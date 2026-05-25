@@ -3,6 +3,7 @@ FROM python:3.12-slim
 ARG INSTALL_FFMPEG=false
 WORKDIR /app
 
+# Last built on 2026-05-26
 # Install ffmpeg conditionally
 RUN if [ "$INSTALL_FFMPEG" = "true" ]; then \
     apt-get update && apt-get install -y ffmpeg && rm -rf /var/lib/apt/lists/*; \
